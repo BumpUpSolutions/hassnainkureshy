@@ -1,5 +1,8 @@
 import Head from 'next/head';
 
+import Navbar from '../components/navbar';
+import About from '../components/about';
+
 export default function Home() {
   return (
     <>
@@ -9,8 +12,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section>
-        <h1>Hassnain Kureshy</h1>
+      <section className='bg-orange-50 flex'>
+        <Navbar />
+        <div className="flex-1 p-10 ml-64">
+          <About />
+        </div>
       </section>
     </>
   )

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.typing-effect {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.typing-effect span {
+  border-right: 2px solid;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
