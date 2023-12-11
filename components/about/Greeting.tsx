@@ -39,7 +39,7 @@ export const Greeting = () => {
   return (
     <div>
       <p className="text-6xl font-bold mb-2">Hello,</p>
-      <p className="text-5xl font-semibold mb-4 text-orange-500">I&#39;m Hassnain Kureshy</p>
+      <p className="text-5xl font-semibold mb-4 text-orange-500">I&#39;m Hassnain Kureshy;</p>
       <div className="typing-effect">
         <span id="typing"></span>
       </div>
