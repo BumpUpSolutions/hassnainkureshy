@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.card-shadow {
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(231,231,231,1);
+  -moz-box-shadow: 0px 0px 15px 5px rgba(231,231,231,1);
+  box-shadow: 0px 0px 15px 5px rgba(231,231,231,1);
+}
+
 .typing-effect {
   font-size: 24px;
   font-weight: bold;
@@ -15,4 +21,14 @@
 @keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: black; }
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0; /* Initially, the content is not visible */
+}
+
+.accordion-content.open {
+  max-height: 1000px; /* Adjust max-height as needed for your content */
 }

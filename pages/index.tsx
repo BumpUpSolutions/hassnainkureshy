@@ -2,7 +2,8 @@ import Head from 'next/head';
 
 import Navbar from '../components/navbar';
 import About from '../components/about';
-import Stack from '../components/stack'
+import Stack from '../components/stack';
+import Experience from '../components/experience';
 
 export default function Home() {
   return (
@@ -13,11 +14,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className='bg-orange-50 flex'>
+      <section className='flex flex-col sm:flex-row'>
         <Navbar />
-        <div className="flex-1 p-10 ml-64">
+        <div className="flex-1 md:p-10 p-0 md:ml-64 ml-0 md:mt-0 mt-10">
           <About />
           <Stack />
+          <Experience />
         </div>
       </section>
     </>

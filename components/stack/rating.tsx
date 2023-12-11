@@ -17,7 +17,7 @@ export const Rating: React.FC<SkillProps> = ({ name, className, rating }) => {
       </div>
       <div className="relative w-12 h-12">
         <div
-          className="absolute top-0 left-0 w-full h-full rounded-full border-4 border-gray-700"
+          className="absolute top-0 left-0 w-full h-full rounded-full border-4 border-blue-900"
         />
         <div
           className="absolute top-0 left-0 w-full h-full rounded-full border-4 border-orange-500"
