@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Shadow Border on White Cards */
+
 .card-shadow {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(231,231,231,1);
   -moz-box-shadow: 0px 0px 15px 5px rgba(231,231,231,1);
   box-shadow: 0px 0px 15px 5px rgba(231,231,231,1);
 }
+
+/* Typing Effect in About Section */
 
 .typing-effect {
   font-size: 24px;
@@ -23,12 +27,15 @@
   50% { border-color: black; }
 }
 
-.accordion-content {
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-  max-height: 0; /* Initially, the content is not visible */
+/* Projects Animation */
+
+.project-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.accordion-content.open {
-  max-height: 1000px; /* Adjust max-height as needed for your content */
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -4,6 +4,7 @@ import Navbar from '../components/navbar';
 import About from '../components/about';
 import Stack from '../components/stack';
 import Experience from '../components/experience';
+import Projects from '../components/projects';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
           <About />
           <Stack />
           <Experience />
+          <Projects />
         </div>
       </section>
     </>
