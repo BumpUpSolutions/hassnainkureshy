@@ -16,9 +16,9 @@ const Experience = () => {
           >
             <h3 className="text-xl">{exp.position}</h3>
             <h4 className="text-lg mb-2 text-orange-500">{exp.company}</h4>
-            <ul className='list-disc'>
+            <ul className='list-disc pl-4'>
               { exp.details.map((detail, i) => (
-                <li key={i}>{detail}</li>
+                <li key={i} className='mb-3'>{detail}</li>
               ))}
             </ul>
           </VerticalTimelineElement>

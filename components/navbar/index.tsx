@@ -23,16 +23,16 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className='relative sm:static'>
-      <button className="p-4 text-white bg-orange-500 absolute top-0 left-0 z-20 sm:relative sm:hidden" onClick={() => setIsOpen(!isOpen)}>
+    <div className='relative md:static'>
+      <button className="p-4 text-white bg-orange-500 absolute top-0 left-0 z-20 md:relative md:hidden" onClick={() => setIsOpen(!isOpen)}>
         {/* Hamburger Icon */}
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
 
-      <div className={`fixed inset-y-0 left-0 z-10 flex flex-col w-64 p-4 bg-blue-900 text-white transition duration-300 transform navbar ${isOpen ? 'translate-x-0' : '-translate-x-full'} sm:translate-x-0`}>
-        <button className="self-end sm:hidden" onClick={closeNavbar}>
+      <div className={`fixed inset-y-0 left-0 z-10 flex flex-col w-64 p-4 bg-blue-900 text-white transition duration-300 transform navbar ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
+        <button className="self-end md:hidden" onClick={closeNavbar}>
           {/* Close Icon */}
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
