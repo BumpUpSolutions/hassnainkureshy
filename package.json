@@ -17,6 +17,7 @@
     "emailjs-com": "^3.2.0",
     "eslint": "8.55.0",
     "eslint-config-next": "14.0.3",
+    "light-icons": "^1.0.12",
     "next": "14.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",

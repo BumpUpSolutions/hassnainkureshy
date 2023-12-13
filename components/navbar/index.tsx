@@ -62,7 +62,7 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        <button className="w-full px-4 py-2 mt-5 text-sm font-medium tracking-wide bg-orange-500 rounded-md">
+        <button className="w-full px-4 py-2 mt-5 font-medium tracking-wide bg-orange-500 rounded-md">
           Download Resume
         </button>
       </div>
