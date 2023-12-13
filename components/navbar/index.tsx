@@ -41,7 +41,7 @@ const Navbar = () => {
 
         <div className="flex flex-col items-center mt-6 -mx-2">
           <div className="relative w-24 h-24 mx-2 overflow-hidden rounded-full border-4 border-white">
-            <Image src="https://robohash.org/mail@ashallendesign.co.uk" alt="avatar" layout="fill" objectFit="cover" />
+            <Image src="https://robohash.org/mail@ashallendesign.co.uk" alt="avatar" width={100} height={100} />
           </div>
           <h4 className="mx-2 mt-4 text-lg font-semibold">Hassnain Kureshy</h4>
           <p className="mx-2 mt-1 text-sm font-medium">Full Stack Engineer</p>

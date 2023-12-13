@@ -8,6 +8,7 @@ export const DisplayImage = () => (
       width={450}
       height={500}
       className="object-cover w-full"
+      priority
     />
   </div>
 );

@@ -4,9 +4,10 @@ export const skills = {
     { name: 'Angular', className: 'devicon-angularjs-plain', rating: 3 },
     { name: 'Next.js', className: 'devicon-nextjs-original', rating: 4 },
     { name: 'Gatsby', className: 'devicon-gatsby-plain', rating: 3 },
-    { name: 'HTML5', className: 'devicon-html5-plain', rating: 4 },
-    { name: 'CSS3', className: 'devicon-css3-plain', rating: 4 },
-    { name: 'SASS', className: 'devicon-sass-original', rating: 4 },
+    { name: 'React Native', className: 'devicon-react-plain', rating: 3 },
+    { name: 'HTML/HTML5', className: 'devicon-html5-plain', rating: 4 },
+    { name: 'CSS/CSS3', className: 'devicon-css3-plain', rating: 4 },
+    { name: 'SASS/SCSS/LESS', className: 'devicon-sass-original', rating: 4 },
     { name: 'Tailwind', className: 'devicon-tailwindcss-plain', rating: 4 },
     { name: 'Bootstrap', className: 'devicon-bootstrap-plain', rating: 4 },
     { name: 'jQuery', className: 'devicon-jquery-plain', rating: 3 },
@@ -44,6 +45,8 @@ export const skills = {
     { name: 'Jenkins', className: 'devicon-jenkins-line', rating: 2 }
   ],
   "Tools": [
+    { name: 'Github', className: 'devicon-github-original', rating: 4 },
+    { name: 'Gitlab', className: 'devicon-gitlab-plain', rating: 4 },
     { name: 'Postman', className: 'devicon-appwrite-plain', rating: 4 },
     { name: 'VS Code', className: 'devicon-vscode-plain', rating: 4 },
     { name: 'JIRA', className: 'devicon-jira-plain', rating: 4 },

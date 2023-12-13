@@ -1,5 +1,7 @@
 export const Description = () => (
   <p className="mt-4 text-gray-600">
-    A dynamic, fast-learning and highly adaptable computer science enthusiast with 8+ Years of Full-stack Development Experience,on a constant look-out for opportunities that provide great learning possibilities, to excel both professionally and personally.
+    Dynamic Full Stack Developer with over 7 years of experience in developing scalable web applications and managing the full
+    software development lifecycle. Proven ability to adapt to new technologies and deliver user-centric solutions. Eager to
+    contribute to a forward-thinking team to drive growth and technological innovation.
   </p>
 );
