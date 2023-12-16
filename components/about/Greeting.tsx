@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 export const Greeting = () => {
   useEffect(() => {
-    const phrases = ["Full Stack Engineer", "Mobile Application Developer", "Solutions Architect"];
+    const phrases = ['Full Stack Engineer', 'Mobile Application Developer', 'Solutions Architect'];
     let currentPhrase = 0;
     let currentLetter = 0;
     let typingSpeed = 150;
@@ -10,7 +10,7 @@ export const Greeting = () => {
     let isDeleting = false;
 
     const type = () => {
-      const display = document.getElementById("typing") as HTMLElement;
+      const display = document.getElementById('typing') as HTMLElement;
       const text = phrases[currentPhrase];
 
       if (isDeleting) {
@@ -38,10 +38,10 @@ export const Greeting = () => {
 
   return (
     <div>
-      <p className="text-6xl font-bold mb-2">Hello,</p>
-      <p className="text-5xl font-semibold mb-4 text-orange-500">I&#39;m Hassnain Kureshy;</p>
-      <div className="typing-effect">
-        <span id="typing"></span>
+      <p className='text-6xl font-bold mb-2'>Hello,</p>
+      <p className='text-5xl font-semibold mb-4 text-orange-500'>I&#39;m Hassnain Kureshy;</p>
+      <div className='typing-effect'>
+        <span id='typing'></span>
       </div>
     </div>
   )

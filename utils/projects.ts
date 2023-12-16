@@ -33,4 +33,4 @@ export const projects = [{
   role: 'Frontend Developer',
   image: '/DesignAShirt.png',
   link: 'https://www.designashirt.com/'
-}]
+}];

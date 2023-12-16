@@ -12,13 +12,13 @@ export default function Home() {
     <>
       <Head>
         <title>Hassnain Kureshy</title>
-        <meta name="description" content="Welcome!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Welcome!' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <section className='flex flex-col h-screen'>
         <div className='w-full content-area overflow-y-auto'>
-          <div className="container lg:px-24 md:px-16 px-2 py-10 mx-auto">
+          <div className='container lg:px-24 md:px-16 px-2 py-10 mx-auto'>
             <About />
             <Stack />
             <Experience />

@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@next/font": "14.0.3",
     "@types/node": "20.10.3",
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
     "devicon": "^2.15.1",
-    "emailjs-com": "^3.2.0",
     "eslint": "8.55.0",
     "eslint-config-next": "14.0.3",
     "light-icons": "^1.0.12",
