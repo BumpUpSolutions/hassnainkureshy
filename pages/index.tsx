@@ -16,15 +16,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className='flex flex-col sm:flex-row'>
-        <Navbar />
-        <div className="flex-1 md:p-10 p-0 md:ml-64 ml-0 md:mt-0 mt-10">
-          <About />
-          <Stack />
-          <Experience />
-          <Projects />
-          <Contact />
+      <section className='flex flex-col h-screen'>
+        <div className='w-full content-area overflow-y-auto'>
+          <div className="container lg:px-24 md:px-16 px-2 py-10 mx-auto">
+            <About />
+            <Stack />
+            <Experience />
+            <Projects />
+            <Contact />
+          </div>
         </div>
+        <Navbar />
       </section>
     </>
   )

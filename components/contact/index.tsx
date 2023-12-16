@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 m-8">
+    <div>
       <h1 className="text-4xl font-bold text-center text-orange-500 mb-4">Have a Project?</h1>
       <h4 className='text-center text-xl mb-8'>Feel free to reach out, and we can discuss your requirements.</h4>
       <div className="flex flex-col lg:flex-row gap-8">

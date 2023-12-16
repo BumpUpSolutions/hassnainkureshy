@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Content Area */
+
+.content-area {
+  height: calc(100vh - 64px - 10px);
+}
+
 /* Shadow Border on White Cards */
 
 .card-shadow {

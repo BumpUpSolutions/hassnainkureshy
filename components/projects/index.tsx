@@ -13,7 +13,7 @@ export interface ProjectProps {
 
 const ProjectsSection: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8 md:mb-32">
+    <div className="mb-8 md:mb-32">
       <h2 className="text-4xl font-bold text-center mb-8 text-orange-500">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
         {projects.map((project: ProjectProps, index: number) => (

@@ -4,7 +4,7 @@ import { experiences } from '../../utils/experiences';
 
 const Experience = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-8 mt-8 mb-8 md:mb-32">
+    <div className="mb-8 md:mb-32">
       <h1 className="text-4xl font-bold text-center text-orange-500 mb-8">Experience</h1>
       <VerticalTimeline lineColor="#1F3A8A">
         {experiences.map((exp, index) => (
