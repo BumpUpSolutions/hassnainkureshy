@@ -1,47 +1,53 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState } from 'react';
 
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
+import { InputMask } from '@react-input/mask';
 import emailjs from '@emailjs/browser';
 
+import { validationSchema } from '../../utils/validations';
+
+// ENV VARIABLES
 const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+interface ContactProps {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+// INITIAL VALUES
+const initialValues: ContactProps = { name: '', email: '', phone: '', message: '' };
+
+const Contact = () => {
   const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
-      alert('Please fill in all fields');
-      setIsSubmitting(false);
-      return;
-    }
+  const handleSubmit = async (
+    values: ContactProps,
+    formikHelpers: FormikHelpers<ContactProps>
+  ) => {
+    const { setSubmitting, resetForm } = formikHelpers;
 
     try {
       if (!serviceID || !templateID || !publicKey) {
         alert('Failed to send message. Please try again later.');
-        setIsSubmitting(false);
+        setSubmitting(false);
         return;
       }
 
-      await emailjs.send(serviceID, templateID, formData, publicKey);
+      const emailjsParams = { ...values };
+
+      await emailjs.send(serviceID, templateID, emailjsParams as Record<string, unknown>, publicKey);
 
       setIsSubmittedSuccessfully(true);
       setTimeout(() => setIsSubmittedSuccessfully(false), 5000);
     } catch (error) {
       alert('Failed to send message. Please try again later.');
     }
-    setIsSubmitting(false);
+    setSubmitting(false);
+    resetForm();
   };
 
   return (
@@ -62,23 +68,79 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
         <div className='lg:w-1/2'>
-          <form onSubmit={handleSubmit} className='space-y-4'>
-            <div className='flex flex-col md:flex-row gap-4'>
-              <input type='text' name='name' placeholder='Name' value={formData.name} onChange={handleChange} className='flex-1 p-2 border-2 border-gray-300 rounded' />
-              <input type='text' name='phone' placeholder='Phone' value={formData.phone} onChange={handleChange} className='flex-1 p-2 border-2 border-gray-300 rounded' />
-            </div>
-            <input type='email' name='email' placeholder='Email' value={formData.email} onChange={handleChange} className='w-full p-2 border-2 border-gray-300 rounded' />
-            <textarea name='message' placeholder='Message' value={formData.message} onChange={handleChange} className='w-full p-2 border-2 border-gray-300 rounded' rows={4}></textarea>
-            {isSubmittedSuccessfully && (
-              <div className='alert alert-success mt-5'>
-                Form submitted successfully!
-              </div>
+          <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+            {({ values, handleChange, handleBlur, isSubmitting, errors, touched }) => (
+              <Form className='space-y-4'>
+                <div className='flex flex-col md:flex-row gap-4'>
+                  <div className='flex flex-col flex-1'>
+                    <Field
+                      type='text'
+                      name='name'
+                      placeholder='Name'
+                      className={`outline-none w-full p-2 border-2 border-gray-300 rounded ${
+                        touched.name && errors.name ? 'border-red-500' : ''
+                      }`}
+                    />
+                    <ErrorMessage name='name' component='div' className="text-red-500 mt-0" />
+                  </div>
+
+                  <div className='flex flex-col flex-1'>
+                    <InputMask
+                      mask='(___) ___ ____'
+                      replacement={{ _: /\d/ }}
+                      name='phone'
+                      placeholder='Phone'
+                      value={values.phone}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      className={`outline-none w-full p-2 border-2 border-gray-300 rounded ${
+                        touched.phone && errors.phone ? 'border-red-500' : ''
+                      }`}
+                    />
+                    <ErrorMessage name='phone' component='div' className="text-red-500 mt-0" />
+                  </div>
+                </div>
+
+                <div>
+                  <Field
+                    type='email'
+                    name='email'
+                    placeholder='Email'
+                    className={`outline-none w-full flex-1 p-2 border-2 border-gray-300 rounded ${
+                      touched.email && errors.email ? 'border-red-500' : ''
+                    }`}
+                  />
+                  <ErrorMessage name='email' component='div' className="text-red-500 mt-0" />
+                </div>
+
+                <div>
+                  <Field
+                    as='textarea'
+                    name='message'
+                    placeholder='Message'
+                    rows={4}
+                    className={`outline-none w-full flex-1 p-2 border-2 border-gray-300 rounded ${
+                      touched.message && errors.message ? 'border-red-500' : ''
+                    }`}
+                  />
+                  <ErrorMessage name='message' component='div' className="text-red-500 mt-0" />
+                </div>
+
+                {isSubmittedSuccessfully && (
+                  <div className='mt-10 bg-green-100 border border-green-500 text-green-900 px-4 py-3 rounded' role="alert">
+                    <strong className="font-bold">Success! &nbsp;</strong>
+                    <span className="block sm:inline">Thank you for reaching out to me, I will get back to you as soon as possible.</span>
+                  </div>
+                )}
+
+                <button type='submit' disabled={isSubmitting} className='w-full px-4 py-2 mt-5 font-medium tracking-wide bg-orange-500 rounded-md text-white'>
+                  Send Message
+                </button>
+              </Form>
             )}
-            <button type='submit' disabled={isSubmitting} className='w-full px-4 py-2 mt-5 font-medium tracking-wide bg-orange-500 rounded-md text-white'>
-              Send Message
-            </button>
-          </form>
+          </Formik>
         </div>
       </div>
     </div>
