@@ -33,14 +33,22 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8 lg:mb-32">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 m-8">
       <h1 className="text-4xl font-bold text-center text-orange-500 mb-4">Have a Project?</h1>
       <h4 className='text-center text-xl mb-8'>Feel free to reach out, and we can discuss your requirements.</h4>
       <div className="flex flex-col lg:flex-row gap-8">
-        <div className="lg:w-1/2 mb-8 lg:mb-0">
-          <p className='text-xl flex px-4 py-2 mb-4 bg-orange-100'><i className="light-icon-location mr-3"></i> Dallas, Texas</p>
-          <p className='text-xl flex px-4 py-2 mb-4 bg-orange-100'><i className="light-icon-mail mr-3"></i> kureshyhassnain@gmail.com</p>
-          <p className='text-xl flex px-4 py-2 bg-orange-100'><i className="light-icon-phone-call mr-3"></i> (469)-902-8969</p>
+        <div id='cards' className="lg:w-1/2 mb-8 lg:mb-0">
+          <div className="flex justify-center p-4 card-shadow mb-8">
+            <p className='text-xl flex align-center'><i className="light-icon-mail mr-3"></i> kureshyhassnain@gmail.com</p>
+          </div>
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-1 justify-center p-4 card-shadow">
+              <p className='text-xl flex align-center'><i className="light-icon-location mr-3"></i> Dallas, Texas</p>
+            </div>
+            <div className="flex flex-1 justify-center p-4 card-shadow">
+              <p className='text-xl flex align-center'><i className="light-icon-phone-call mr-3"></i> (469)-902-8969</p>
+            </div>
+          </div>
         </div>
         <div className="lg:w-1/2">
           <form onSubmit={handleSubmit} className="space-y-4">

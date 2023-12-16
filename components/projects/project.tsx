@@ -19,7 +19,7 @@ export const Project: React.FC<ProjectProps> = ({ name, role, image, link }) => 
         <Image 
           src={image}
           alt={name}
-          width={500}
+          width={400}
           height={300}
         />
       </div>
