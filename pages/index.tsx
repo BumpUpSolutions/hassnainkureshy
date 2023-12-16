@@ -14,7 +14,7 @@ export default function Home() {
         <title>Hassnain Kureshy</title>
         <meta name='description' content='Welcome!' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon.png' />
       </Head>
       <section className='flex flex-col h-screen'>
         <div className='w-full content-area overflow-y-auto'>
