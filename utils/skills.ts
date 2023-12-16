@@ -40,6 +40,8 @@ export const skills = {
   "DevOps": [
     { name: 'AWS', className: 'devicon-amazonwebservices-original', rating: 2 },
     { name: 'Google Cloud', className: 'devicon-googlecloud-plain', rating: 3 },
+    { name: 'Vercel', className: 'devicon-appwrite-plain', rating: 3 },
+    { name: 'Netlify', className: 'devicon-appwrite-plain', rating: 3 },
     { name: 'Git', className: 'devicon-git-plain', rating: 4 },
     { name: 'Docker', className: 'devicon-docker-plain', rating: 2 },
     { name: 'Jenkins', className: 'devicon-jenkins-line', rating: 2 }

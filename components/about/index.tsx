@@ -1,3 +1,4 @@
+import { Social } from './Social';
 import { Greeting } from './Greeting';
 import { Description } from './Description';
 import { DisplayImage } from './DisplayImage';
@@ -6,6 +7,7 @@ import { Stats } from './Stats';
 const About = () => {
   return (
     <div id='about'>
+      <Social />
       <div className='flex flex-1 flex-col lg:flex-row items-center lg:space-x-8'>
         <div className='lg:w-1/2'>
           <Greeting />

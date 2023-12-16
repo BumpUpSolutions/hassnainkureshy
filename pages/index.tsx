@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <section className='flex flex-col h-screen'>
         <div className='w-full content-area overflow-y-auto'>
-          <div className='container lg:px-24 md:px-16 px-2 py-10 mx-auto'>
+          <div className='container lg:px-24 md:px-16 px-2 pb-10 mx-auto'>
             <About />
             <Stack />
             <Experience />

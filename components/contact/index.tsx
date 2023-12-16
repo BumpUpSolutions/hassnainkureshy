@@ -2,6 +2,10 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 
 import emailjs from '@emailjs/browser';
 
+const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
@@ -24,10 +28,6 @@ const Contact = () => {
     }
 
     try {
-      const serviceID = process.env.NEXT_SERVICE_ID;
-      const templateID = process.env.NEXT_TEMPLATE_ID;
-      const publicKey = process.env.NEXT_PUBLIC_KEY;
-
       if (!serviceID || !templateID || !publicKey) {
         alert('Failed to send message. Please try again later.');
         setIsSubmitting(false);
@@ -37,7 +37,7 @@ const Contact = () => {
       await emailjs.send(serviceID, templateID, formData, publicKey);
 
       setIsSubmittedSuccessfully(true);
-      setTimeout(() => setIsSubmittedSuccessfully(false), 3000);
+      setTimeout(() => setIsSubmittedSuccessfully(false), 5000);
     } catch (error) {
       alert('Failed to send message. Please try again later.');
     }
