@@ -17,8 +17,8 @@ export default function Home() {
         <link rel='icon' href='/favicon.png' />
       </Head>
       <section className='flex flex-col h-screen'>
-        <div className='w-full content-area overflow-y-auto'>
-          <div className='container lg:px-24 md:px-16 px-2 pb-10 mx-auto'>
+        <div className='w-full content-area overflow-y-auto pb-10'>
+          <div className='container lg:px-24 md:px-16 px-2 mx-auto'>
             <About />
             <Stack />
             <Experience />

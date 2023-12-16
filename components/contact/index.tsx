@@ -56,14 +56,14 @@ const Contact = () => {
       <h4 className='text-center text-xl mb-8'>Feel free to reach out, and we can discuss your requirements.</h4>
       <div className='flex flex-col lg:flex-row gap-8'>
         <div id='cards' className='lg:w-1/2 mb-8 lg:mb-0'>
-          <div className='flex justify-center p-4 card-shadow mb-8'>
+          <div className='flex justify-center p-4 rounded-lg card-shadow mb-8'>
             <p className='text-xl flex align-center'><i className='light-icon-mail mr-3'></i> kureshyhassnain@gmail.com</p>
           </div>
           <div className='flex flex-col lg:flex-row gap-8'>
-            <div className='flex flex-1 justify-center p-4 card-shadow'>
+            <div className='flex flex-1 justify-center p-4 rounded-lg card-shadow'>
               <p className='text-xl flex align-center'><i className='light-icon-location mr-3'></i> Dallas, Texas</p>
             </div>
-            <div className='flex flex-1 justify-center p-4 card-shadow'>
+            <div className='flex flex-1 justify-center p-4 rounded-lg card-shadow'>
               <p className='text-xl flex align-center'><i className='light-icon-phone-call mr-3'></i> (469)-902-8969</p>
             </div>
           </div>
