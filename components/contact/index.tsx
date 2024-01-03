@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='mt-8 md:mt-32'>
+    <div id='contact' className='lg:px-24 md:px-16 px-2 mt-8 md:mt-32'>
       <h1 className='text-4xl font-bold text-center text-orange-500 mb-4'>Have a Project?</h1>
       <h4 className='text-center text-xl mb-8'>Feel free to reach out, and we can discuss your requirements.</h4>
       <div className='flex flex-col lg:flex-row gap-8'>

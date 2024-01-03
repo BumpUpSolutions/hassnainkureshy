@@ -11,7 +11,7 @@ export const Social = () => {
   };
 
   return (
-    <div className="flex justify-between items-center py-2">
+    <div className="flex justify-between items-center py-2 lg:px-24 md:px-16 px-2">
       <div className="flex items-center space-x-4">
         <Link href="https://www.linkedin.com/in/hkureshy" target="_blank" rel="noopener noreferrer">
           <i className="devicon-linkedin-plain colored text-2xl"></i>

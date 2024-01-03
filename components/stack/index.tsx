@@ -34,7 +34,7 @@ const Stack = () => {
   );
 
   return (
-    <div id='stack' className='mt-8 md:mt-32'>
+    <div id='stack' className='lg:px-24 md:px-16 px-2 mt-8 md:mt-32'>
       <h2 className='text-4xl font-bold text-center text-orange-500 mb-8'>Skills and Tech Stack</h2>
       {Object.keys(skills).map((category, index) => (
         <div className='mb-5' key={index}>
